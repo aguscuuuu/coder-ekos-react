@@ -22,8 +22,8 @@ The site provides information about products, payment methods, shipping options,
 
 ## Access
 
-- [**Repository:**](https://github.com/aguscuuuu/coder-ekos-react)  
-- [**Deployment:**]() 
+- [**Repository**](https://github.com/aguscuuuu/coder-ekos-react)  
+- [**Deployment**]() 
 
 ## Used Technologies
 
