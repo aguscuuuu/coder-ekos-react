@@ -1,12 +1,58 @@
-# React + Vite
+# Ekos Accesorios (React e-commerce)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description 
 
-Currently, two official plugins are available:
+**Ekos** is an online store for fine jewelry and fashion accessories, where users can discover and purchase exclusive design necklaces, earrings, and bracelets.  
+The site provides information about products, payment methods, shipping options, exchange policies, and contact, offering a safe and personalized shopping experience for customers throughout Argentina.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Status
 
-## Expanding the ESLint configuration
+- **Status:** In progress
+- **Server:** 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Version & Date
+
+- **Version:** 1.0
+- **Date:** July 2025
+
+## Language
+
+- **Code:** ENG  
+- **Project:** ESP
+
+## Access
+
+- [**Repository:**](https://github.com/aguscuuuu/coder-ekos-react)  
+- [**Deployment:**]() 
+
+## Used Technologies
+
+- **Languages:** HTML, CSS, SCSS, JavaScript  
+- **Frameworks-Libraries:** React  
+- **Databases:** 
+- **Tools:** 
+
+## Developers & Contributors
+
+- **Agustin Cuenca** (`AgustinCuenca` `aguabentura08@gmail.com`) — *Main Developer*
+
+## License
+
+This work has been dedicated to the public domain under the **Creative Commons CC0 1.0 Universal Public Domain Dedication**.
+
+To the extent possible under law, the author has waived all copyright and related or neighboring rights.
+
+> You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
+
+**© 2025 cueCode Software.**
+
+ 
+                                       ______          __              
+                      _______  _____  / ____/___  ____/ /__            
+                     / ___/ / / / _ \/ /   / __ \/ __  / _ \           
+                   / /__/ /_/ /  __/ /___/ /_/ / /_/ /  __/                  
+                    \___/\__,_/\___/\____/\____/\__,_/\___/  _____    
+                      / ___/____  / __/ /__      ______ _________      
+                      \__ \/ __ \/ /_/ __/ | /| / / __ `/ ___/ _ \     
+                     ___/ / /_/ / __/ /_ | |/ |/ / /_/ / /  /  __/     
+                    /____/\____/_/  \__/ |__/|__/\__,_/_/   \___/  
