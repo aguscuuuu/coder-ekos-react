@@ -1,3 +1,4 @@
+import "../styles/styles.css"
 import {useState} from 'react'
 
 const ItemCount = () => {

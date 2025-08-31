@@ -1,0 +1,15 @@
+@import "variables";
+@import "breakpoints";
+@import "App";
+@import "CartWidget";
+@import "ItemCount";
+@import "ItemListContainer";
+@import "NavBar";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+}

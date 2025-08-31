@@ -1,3 +1,4 @@
+import "../styles/styles.css"
 const ItemListContainer = (props) => {
     const {mensaje} = props
     return(

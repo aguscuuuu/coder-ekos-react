@@ -1,16 +1,18 @@
-import "../styles/NavBar.css"
+import "../styles/styles.css"
 import CartWidget from "./CartWidget"
 const NavBar = () => {
     return(
         <nav className="nav-container">
-            <a href="">
+            <a href="index.html">
                 <img src="../logo.svg" alt="logo" />
             </a> 
-            <a href="">Inicio</a> 
-            <a href="">Productos</a> 
-            <a href="">Contacto</a> 
-            <a href="">Dónde encontrarnos</a>
-            <a href="">Política de cambio</a>
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="">Contacto</a> </li>
+                <li><a href="">Dónde encontrarnos</a></li>
+                <li><a href="">Política de cambio</a></li>
+            </ul>
             <CartWidget/>
         </nav>
     )
