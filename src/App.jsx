@@ -1,5 +1,5 @@
 import './styles/styles.css'
-import NavBar from './components/Navbar'
+import NavBar from './components/NavBar'
 import Button from "./examples/Button"
 import ItemCount from "./components/ItemCount"
 import ItemListContainer from "./components/ItemListContainer"

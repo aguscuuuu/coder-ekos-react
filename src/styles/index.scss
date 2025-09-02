@@ -1,5 +1,6 @@
 @import "variables";
 @import "breakpoints";
+@import "scroll";
 @import "App";
 @import "CartWidget";
 @import "ItemCount";
@@ -12,4 +13,8 @@
 	box-sizing: border-box;
 	font-family: "Montserrat", sans-serif;
 	font-size: 16px;
+}
+.custom-tooltip {
+	--bs-tooltip-bg: #ffffff;
+	--bs-tooltip-color: black;
 }

@@ -1,5 +1,25 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e8d0c4;
+  border: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #93556c;
+  transition: background 0.3s ease;
+  border: 1px solid #8c4e63;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #80475b;
+}
+
 main {
-  padding-top: 6rem; /* mismo valor que el nav */
+  padding-top: 6rem;
 }
 
 .carrito {
@@ -38,7 +58,7 @@ main {
   height: 4.5rem;
 }
 .nav-container img {
-  margin-left: 5rem;
+  margin-left: 10rem;
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
   height: auto;
@@ -77,6 +97,11 @@ main {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
+}
+
+.custom-tooltip {
+  --bs-tooltip-bg: #ffffff;
+  --bs-tooltip-color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */
