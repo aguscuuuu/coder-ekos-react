@@ -1,11 +1,11 @@
-@import "variables";
-@import "breakpoints";
-@import "scroll";
-@import "App";
-@import "CartWidget";
-@import "ItemCount";
-@import "ItemListContainer";
-@import "NavBar";
+@use "variables";
+@use "breakpoints";
+@use "scroll";
+@use "App";
+@use "CartWidget";
+@use "ItemCount";
+@use "ItemListContainer";
+@use "NavBar";
 
 * {
 	margin: 0;

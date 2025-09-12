@@ -1,17 +1,19 @@
+@use "variables";
+
 // webkit navegator scrollbar 
 ::-webkit-scrollbar {
 	width: 8px;
 }
 ::-webkit-scrollbar-track {
-	background: $cream2;
+	background: variables.$cream2;
 	border: none;
 }
 ::-webkit-scrollbar-thumb {
-	background: $wine8;
+	background: variables.$wine8;
 	transition: background 0.3s ease;
-	border: 1px solid $wine7;
+	border: 1px solid variables.$wine7;
     border-radius: 15px;
 }
 ::-webkit-scrollbar-thumb:hover {
-	background: $wine6;
+	background: variables.$wine6;
 }
