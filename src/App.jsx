@@ -1,20 +1,23 @@
+// nada hecho con fetch, promesa local
 import './styles/styles.css'
 import NavBar from './components/NavBar'
-import Button from "./examples/Button"
-import ItemCount from "./components/ItemCount"
 import ItemListContainer from "./components/ItemListContainer"
-import CartWidget from "./components/CartWidget"
+import ItemDetailContainer from './components/ItemDetailContainer'
+import Error from './components/Error'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
   
   return (
-    <>
+    <BrowserRouter>
       <NavBar/>
-      <main>
-        <ItemListContainer mensaje="Bienvenidos a Ekos"/>
-        <ItemCount/>
-      </main>
-    </>
+      <Routes>
+        <Route path='' element={<ItemListContainer mensaje="Bienvenidos a Ekos"/>}/>
+        <Route path='/category/:type' element={<ItemListContainer mensaje="Estas en la categoria: "/>}/>
+        <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+        <Route path='*' element={<Error/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 export default App
