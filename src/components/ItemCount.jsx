@@ -1,4 +1,7 @@
+// contador que permite aumentar hasta el stock disponible y no ir a valores negativos.
+// hijo de ItemDetail
 import {useState} from 'react'
+import '../styles/_ItemDetail.scss'
 
 const ItemCount = ({stock, onAdd})=>{
 
@@ -11,7 +14,7 @@ const ItemCount = ({stock, onAdd})=>{
     }
     const restar = ()=>{
         if(count > 0){
-            setCount(count -1)
+            setCount(count - 1)
         }
     }
     const comprar = () => {
@@ -19,11 +22,11 @@ const ItemCount = ({stock, onAdd})=>{
     }
 
     return(
-        <div>
-            <button onClick={restar}>-</button>
-            <span>{count}</span>
-            <button onClick={sumar}>+</button>
-            <button onClick={comprar} disabled={stock === 0 || count === 0}>Comprar</button>
+        <div className="item-count-container">
+            <button className="item-count-button-add" onClick={restar}>-</button>
+            <span className="item-count">{count}</span>
+            <button className="item-count-button-remove" onClick={sumar}>+</button>
+            <button className="item-count-button-buy" onClick={comprar} disabled={stock === 0 || count === 0}>Comprar</button>
         </div>
     )
 }

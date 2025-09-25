@@ -1,3 +1,6 @@
+// mostrar el detalle del producto
+// debe contener el id de la ruta con useParams, buscar el producto en el listado y manejar una promesa para obtener los datos
+// la promesa debe ejecutarse dentro de un useEffect y la respuesta guardarse en un estado, el cual se pasa por props a su hijo ItemDetail
 import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
 import { getOneProduct, getProducts } from '../mock/AsyncService'

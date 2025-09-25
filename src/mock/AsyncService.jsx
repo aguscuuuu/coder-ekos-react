@@ -5,7 +5,8 @@ const productos = [
         stock: 5,
         price: 5000,
         img: 'https://i.postimg.cc/L5Cv9ff8/aros1.webp',
-        category: 'Aros',
+        category: 'aros',
+        material: null,
     },
     {
         id: '2',
@@ -13,7 +14,8 @@ const productos = [
         stock: 8,
         price: 2200,
         img: 'https://i.postimg.cc/FRxD6wHc/aros2.webp',
-        category: 'Aros',
+        category: 'aros',
+        material: null,
     },
     {
         id: '3',
@@ -21,7 +23,8 @@ const productos = [
         stock: 4,
         price: 8000,
         img: 'https://i.postimg.cc/bvk6xZXm/aros3.webp',
-        category: 'Aros',
+        category: 'aros',
+        material: null,
     },
     {
         id: '4',
@@ -29,7 +32,8 @@ const productos = [
         stock: 3,
         price: 1600,
         img: 'https://i.postimg.cc/t4LSnhc1/aros4.webp',
-        category: 'Aros',
+        category: 'aros',
+        material: null,
     },
     {
         id: '5',
@@ -37,7 +41,8 @@ const productos = [
         stock: 9,
         price: 3000,
         img: 'https://i.postimg.cc/WzbXcSdy/aros5.webp',
-        category: 'Aros',
+        category: 'aros',
+        material: null,
     },
     {
         id: '6',
@@ -45,7 +50,8 @@ const productos = [
         stock: 7,
         price: 2600,
         img: 'https://i.postimg.cc/mD4m8TBB/aros6.webp',
-        category: 'Aros',
+        category: 'aros',
+        material: null,
     },
     {
         id: '7',
@@ -53,7 +59,8 @@ const productos = [
         stock: 7,
         price: 3000,
         img: 'https://i.postimg.cc/Z5hVxrmX/collar1.webp',
-        category: 'Collares',
+        category: 'collares',
+        material: null,
     },
     {
         id: '8',
@@ -61,7 +68,8 @@ const productos = [
         stock: 9,
         price: 3000,
         img: 'https://i.postimg.cc/5Nzszshw/collar2.webp',
-        category: 'Collares',
+        category: 'collares',
+        material: null,
     },
     {
         id: '9',
@@ -69,7 +77,8 @@ const productos = [
         stock: 8,
         price: 2000,
         img: 'https://i.postimg.cc/LXhT8Dkg/collar3.webp',
-        category: 'Collares',
+        category: 'collares',
+        material: null,
     },
     {
         id: '10',
@@ -77,7 +86,8 @@ const productos = [
         stock: 3,
         price: 2000,
         img: 'https://i.postimg.cc/Jhpx8vXW/collar4.webp',
-        category: 'Collares',
+        category: 'collares',
+        material: null,
     },
     {
         id: '11',
@@ -85,7 +95,8 @@ const productos = [
         stock: 5,
         price: 1000,
         img: 'https://i.postimg.cc/jjxcGtLX/collar5.webp',
-        category: 'Collares',
+        category: 'collares',
+        material: null,
     },
     {
         id: '12',
@@ -93,7 +104,8 @@ const productos = [
         stock: 6,
         price: 2000,
         img: 'https://i.postimg.cc/wjcFf7TM/collar6.webp',
-        category: 'Collares',
+        category: 'collares',
+        material: null,
     },
     {
         id: '13',
@@ -101,7 +113,8 @@ const productos = [
         stock: 3,
         price: 1300,
         img: 'https://i.postimg.cc/CMqGrzc0/pulsera1.webp',
-        category: 'Pulseras',
+        category: 'pulseras',
+        material: null,
     },
     {
         id: '14',
@@ -109,7 +122,8 @@ const productos = [
         stock: 7,
         price: 1500,
         img: 'https://i.postimg.cc/B6dxQ0QR/pulsera2.webp',
-        category: 'Pulseras',
+        category: 'pulseras',
+        material: null,
     },
     {
         id: '15',
@@ -117,7 +131,8 @@ const productos = [
         stock: 8,
         price: 1700,
         img: 'https://i.postimg.cc/yN8hLjbp/pulsera3.webp',
-        category: 'Pulseras',
+        category: 'pulseras',
+        material: null,
     },
     {
         id: '16',
@@ -125,7 +140,8 @@ const productos = [
         stock: 2,
         price: 1600,
         img: 'https://i.postimg.cc/zBLCrB5n/pulsera4.webp',
-        category: 'Pulseras',
+        category: 'pulseras',
+        material: null,
     },
     {
         id: '17',
@@ -133,7 +149,8 @@ const productos = [
         stock: 4,
         price: 1200,
         img: 'https://i.postimg.cc/PqVW9ZGX/pulsera5.webp',
-        category: 'Pulseras',
+        category: 'pulseras',
+        material: null,
     },
     {
         id: '18',
@@ -141,7 +158,8 @@ const productos = [
         stock: 5,
         price: 4000,
         img: 'https://i.postimg.cc/gj83xTxj/pulsera6.webp',
-        category: 'Pulseras',
+        category: 'pulseras',
+        material: null,
     },
 ]
 
@@ -150,7 +168,7 @@ export const getProducts = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if(error){
-                reject('Hubo un error. Intente más tarde')
+                reject('Hubo un error. Intente más tarde.')
             }else{
                 resolve(productos)
             }
@@ -159,7 +177,7 @@ export const getProducts = () => {
 }
 
 export const getOneProduct = (id) => {
-    return new promise ((resolve) =>{
+    return new Promise ((resolve) =>{
         setTimeout  (() => {
             let prod = productos.find((prod) => prod.id === id)
             resolve(prod)

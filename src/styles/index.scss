@@ -3,9 +3,12 @@
 @use "scroll";
 @use "App";
 @use "CartWidget";
-@use "ItemCount";
 @use "ItemListContainer";
+@use "ItemDetail";
 @use "NavBar";
+@use "Item";
+@use "ItemCount";
+@use "Error";
 
 * {
 	margin: 0;

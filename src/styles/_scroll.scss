@@ -17,3 +17,8 @@
 ::-webkit-scrollbar-thumb:hover {
 	background: variables.$wine6;
 }
+
+* {
+    scrollbar-width:initial;
+    scrollbar-color: variables.$wine8 variables.$cream2;
+}

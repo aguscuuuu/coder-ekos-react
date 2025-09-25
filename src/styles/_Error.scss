@@ -1,0 +1,31 @@
+.error-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #753e52;
+    color: white;
+    user-select: none;
+    h1 {
+        font-size: 8rem;
+        margin-bottom: 1rem;
+    }
+    p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+    a {
+        padding: 0.75rem 1.5rem;
+        background: #5c3040;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: background 0.2s;
+        &:hover {
+            background: #4b2835;
+        }
+    }
+}
