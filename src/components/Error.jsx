@@ -3,11 +3,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/_Error.scss'
+import { TbRouteX } from "react-icons/tb";
 
 const Error = () => {
     console.error("Error 404 - Ruta no encontrada")
     return (
         <div className="error-container">
+            <TbRouteX style={{fontSize: "6rem"}}/>
             <h1>404</h1>
             <p>Ruta no encontrada.</p>
             <Link to='/'>Volver al inicio</Link>
