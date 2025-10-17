@@ -1,43 +1,53 @@
-// manejar una promesa para obtener el listado de productos
-// la promesa debe ejecutarse dentro de un useEffect y la respuesta guardarse en un estado
-// se debe aplicar la lógica de categorías para reutilizar el componente, ya sea que la categoría exista o no
-// utilizar el hook useParams para aplicar la lógica de filtrado de categorías.
-// debe pasar el listado a su hijo ItemList
-
 import { useState, useEffect } from "react"
-import { getProducts } from "../mock/AsyncService"
 import ItemList from "./ItemList"
+import LoaderComponent from "./LoaderComponent"
 import { useParams } from "react-router-dom"
+import { collection, getDocs, query, where } from "firebase/firestore"
+import { db } from "../service/firebase"
 
-const ItemListContainer = ({mensaje})=>{
-
+const ItemListContainer = ({ mensaje }) => {
     const [data, setData] = useState([])
-    const {type}=useParams()
+    const [loading, setLoading] = useState(false)
+    const { type } = useParams()
 
-    console.log('categoria: ', type)
+    useEffect(() => {
+        setLoading(true)
 
-    useEffect(()=>{
-        getProducts()
-        .then((res)=> {
-            if(type){
-                //filtrar
-                setData(res.filter((prod) => prod.category === type))
-            }else{
-                //type es undefined y no filtro
-                setData(res)
-            }
-        })
-        .catch((error) => console.error(error))
-        //tiene que estar a la escucha del cambio de categoria
-    },[type])
+        const prodCollection = type 
+            ? query(collection(db, "products"), where("category", "==", type))
+            : collection(db, "products")
 
-    // console.log(data)
+        getDocs(prodCollection)
+            .then((res) => {
+                const list = res.docs.map((doc) => ({
+                    id: doc.id,
+                    ...doc.data(),
+                }))
+                setData(list)
+            })
+            .catch((error) => console.error("Error al obtener los productos:", error))
+            .finally(() => setLoading(false))
+    }, [type])
 
-    return(
-        <div>
-            <h1>{mensaje} {type && <span style={{textTransform:'capitalize'}}>{type}</span>}</h1>
-            <ItemList data={data} />
-        </div>
+    return (
+        <>
+            {loading ? (
+                <LoaderComponent />
+            ) : (
+                <>
+                    <h1 className="text-center">
+                        {mensaje}{" "}
+                        {type && (
+                            <span style={{ textTransform: "capitalize" }}>
+                                {type}
+                            </span>
+                        )}
+                    </h1>
+                    <ItemList data={data} />
+                </>
+            )}
+        </>
     )
 }
+
 export default ItemListContainer

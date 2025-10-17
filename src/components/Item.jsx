@@ -9,7 +9,7 @@ const Item = ({ prod }) => {
         <div className="item">
             <Link to={`/item/${prod.id}`}>
                 <div className="item__image">
-                    <img src={prod.img} alt={prod.name} />
+                    <img src={prod.img} alt={prod.name}/>
                 </div>
             </Link>
             <div className="item__body">

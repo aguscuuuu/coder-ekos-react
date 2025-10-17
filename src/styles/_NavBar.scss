@@ -1,38 +1,45 @@
 .nav-container {
     position: fixed;
-    background-color: #f3e3db;
-    padding: 0;
+    background-color: #fff9f4;
+    padding: 0 3rem 0 13rem; /* espacio lateral en vez de margen en el logo */
     flex-direction: row;
     z-index: 1000;
     width: 100%;
-    border-bottom: 2px solid #e8d0c4;
+    border-bottom: 1px solid #d3c7cb;
     box-shadow: 0 0.3125rem 0.5rem rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     height: 4.5rem;
+    overflow: visible;
+
+    /* logo: quitar márgenes grandes y centrar verticalmente */
     img {
-        margin-left: 10rem;
-        margin-top: 0.2rem;
-        margin-bottom: 0.2rem;
+        margin: 0;
         height: auto;
         width: 8rem;
+        align-self: center;
     }
+
+    /* franja verde: usar padding y align-items en vez de height fija */
     ul {
-        width: 100%;
+        flex: 1;
         list-style: none;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: end;
-        gap: 0.5rem;
-        padding: 0;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        align-items: center;      /* centra verticalmente los li dentro de la franja */
+        justify-content: flex-end;
+        gap: 0.6rem;
+        padding: 0.45rem 1rem;    /* controla altura visual de la franja */
+        margin: 0 1rem;
+        border-radius: 2px;
+        box-sizing: border-box;
+
         li {
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: border-bottom 0.3s allow-discrete;
+            transition: border-bottom 0s ease;
             border-bottom: 2px solid transparent;
+            height: auto;         /* no forzar altura */
             &:hover {
                 border-bottom: 2px solid #753e52;
             }
@@ -40,13 +47,35 @@
                 font-weight: 500;
                 text-decoration: none;
                 color: black;
-                display: inline-block;
+                display: flex;               /* para centrar el texto */
+                align-items: center;
+                justify-content: center;
+                width: 100%;                 /* ocupa todo el ancho del li */
+                height: 100%;                /* ocupa todo el alto del li */
                 border-radius: 5px;
-                font-size: 0.95rem;
-                padding: 0.4rem 0.8rem;
-                text-align: center;
+                font-size: 0.9rem;
+                padding: 0.5rem 0.5rem;
+                line-height: 1;
+                box-sizing: border-box;
             }
         }
+    }
+
+    /* contenedor del carrito fuera del ul: centrar verticalmente */
+    .nav-cart {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin-right: 0.5rem;
+    }
+
+    /* asegurar que el link que envuelve el carrito no rompa la alineación */
+    .nav-cart a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        color: inherit;
+        text-decoration: none;
     }
 
     // Dropdown styles
@@ -57,34 +86,40 @@
     .dropdown-menu {
         position: absolute;
         top: 100%;
-        left: 0;
-        background: #f3e3db;
+        left: -1.1rem;
+        background: #fff9f4;
         list-style: none;
-        padding: 0;
-        margin: 0;
+        padding: 0.3rem 0.3rem;
+        margin-top: 0.1srem;
         z-index: 100;
         min-width: 9rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.30);
-		border: 1px solid #e8d0c4;
+        border-bottom: 1px solid #d3c7cb;
+        border-left: 1px solid #d3c7cb;
+        border-right: 1px solid #d3c7cb;
+        border-top: none;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
         li {
-            padding: 8px 16px;
+            padding: 0;
             display: block;
             border-bottom: 2px solid transparent;
-			transition: border-bottom 0.3s allow-discrete;
-			text-align: left;
-            &:last-child {
-                border-bottom: none;
-            }
+            transition: border-bottom 0s ease;
+            text-align: center;
             &:hover {
                 border-bottom: 2px solid #753e52;
             }
             a {
                 color: black;
                 font-weight: 500;
-                font-size: 0.95rem;
-                padding: 0;
+                font-size: 0.85rem;
+                padding: 8px 16px;
                 border-radius: 0;
-				text-align: inherit;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
             }
         }
     }

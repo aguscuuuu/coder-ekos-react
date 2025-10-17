@@ -6,16 +6,8 @@ import Item from './Item'
 import '../styles/styles.css'
 
 const ItemList = ({data}) => {
-	// console.log(props)
-    // const {data}= props
 	return (
 		<div className="item-list-container">
-			{/* {data.map((prod)=> {
-			return <Item key={prod.id} prod={prod}/>
-			})} */}
-			{/* {data.map((prod)=> (
-				<Item key={prod.id} prod={prod}/>
-			))} */}
 			{data.map((prod)=>  <Item key={prod.id} prod={prod}/>)}
 		</div>
 	)

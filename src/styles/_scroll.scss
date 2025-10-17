@@ -2,7 +2,7 @@
 
 // webkit navegator scrollbar 
 ::-webkit-scrollbar {
-	width: 8px;
+	width: 5px;
 }
 ::-webkit-scrollbar-track {
 	background: variables.$cream2;
@@ -12,13 +12,13 @@
 	background: variables.$wine8;
 	transition: background 0.3s ease;
 	border: 1px solid variables.$wine7;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
 	background: variables.$wine6;
 }
 
 * {
-    scrollbar-width:initial;
-    scrollbar-color: variables.$wine8 variables.$cream2;
+    scrollbar-width: thin;
+    scrollbar-color: #{variables.$wine8} #{variables.$cream3};
 }

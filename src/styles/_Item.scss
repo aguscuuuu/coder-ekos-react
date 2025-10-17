@@ -8,6 +8,7 @@
     transition: box-shadow 0.3s ease;
     max-width: 280px;
     margin: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     .item__body a {
         text-decoration: none;
     }
@@ -30,15 +31,16 @@
     }
 
     &__body {
-        padding: 16px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
-        gap: 8px;
     }
 
     &__title {
         font-size: 1rem;
         font-weight: 600;
+        padding: 0;
+        margin: 0;
         color: #333;
         display: inline-block;
     }
@@ -46,25 +48,27 @@
     &__price {
         font-size: 0.8rem;
         color: #555;
+        padding-top: 0.5rem;
         pointer-events: none;
         pointer-events: none;
+        margin-bottom: 5px;
+        border-top: 1px solid #d3c7cb;
     }
 
     &__button {
         display: inline-block;
-        margin-top: 8px;
-        padding: 8px 14px;
+        padding: 5px 14px;
         background: #93556c;
         color: #fff;
         text-align: center;
         border-radius: 6px;
+        margin: 0;
         text-decoration: none;
         font-size: 0.8rem;
         font-weight: 500;
         transition: background 0.3s ease;
-
         &:hover {
-        background: #753e52;
+            background: #753e52;
         }
     }
 }

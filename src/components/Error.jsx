@@ -9,7 +9,7 @@ const Error = () => {
     return (
         <div className="error-container">
             <h1>404</h1>
-            <p>La página que estás buscando no pudo ser encontrada.</p>
+            <p>Ruta no encontrada.</p>
             <Link to='/'>Volver al inicio</Link>
         </div>
     )

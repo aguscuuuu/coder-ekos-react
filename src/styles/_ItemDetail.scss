@@ -45,4 +45,26 @@
         color: #333;
         display: inline-block;
     }
+    .item-detail-button-go-cart {
+        height: 40px;
+        padding: 0 16px;
+        margin-top: 16px;
+        background: #93556c;
+        color: #fff;
+        border: 2px solid #93556c;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: background 0.3s, border-color 0.3s;
+
+        &:hover {
+            background: #753e52;
+            border-color: #753e52;
+        }
+    }
 }

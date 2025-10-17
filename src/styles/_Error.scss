@@ -4,12 +4,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #753e52;
+    background: linear-gradient(135deg, #925169 0%, #6a374c 25%, #532b3d 50%, #432230 75%, #1f0f15 100%);
+
+
     color: white;
     user-select: none;
     h1 {
         font-size: 8rem;
         margin-bottom: 1rem;
+        font-weight: 700;
     }
     p {
         font-size: 1.3rem;
@@ -17,15 +20,15 @@
     }
     a {
         padding: 0.75rem 1.5rem;
-        background: #5c3040;
-        color: white;
+        background: white;
+        color: #5c3040;
         border-radius: 5px;
         text-decoration: none;
         font-size: 1rem;
         font-weight: 600;
         transition: background 0.2s;
         &:hover {
-            background: #4b2835;
+            background: #ececec;
         }
     }
 }

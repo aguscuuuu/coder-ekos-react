@@ -3,7 +3,7 @@
 import "../styles/styles.css"
 import { useState } from "react"
 import CartWidget from "./CartWidget"
-import {NavLink} from 'react-router-dom'
+import {NavLink , Link} from 'react-router-dom'
 
 const NavBar = () => {
     
@@ -33,11 +33,15 @@ const NavBar = () => {
                         </ul>
                     )}
                 </li>
-                <li><NavLink to="">Contacto</NavLink> </li>
+                <li><NavLink to="">Contacto</NavLink></li>
                 <li><NavLink to="">Dónde encontrarnos</NavLink></li>
                 <li><NavLink to="">Política de cambio</NavLink></li>
             </ul>
-            <CartWidget/>
+            <div >
+                <NavLink to={"/cart"}>
+                    <CartWidget/>
+                </NavLink>
+            </div>
         </nav>
     )
 }
