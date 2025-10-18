@@ -5,7 +5,7 @@
     flex-direction: row;
     z-index: 1000;
     width: 100%;
-    border-bottom: 1px solid #d3c7cb;
+    border-bottom: 0.5px solid #d3c7cb9d;
     box-shadow: 0 0.3125rem 0.5rem rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
@@ -93,9 +93,9 @@
         margin-top: 0.1srem;
         z-index: 100;
         min-width: 9rem;
-        border-bottom: 1px solid #d3c7cb;
-        border-left: 1px solid #d3c7cb;
-        border-right: 1px solid #d3c7cb;
+        border-bottom: 0.5px solid #d3c7cb9d;
+        border-left: 0.5px solid #d3c7cb9d;
+        border-right: 0.5px solid #d3c7cb9d;
         border-top: none;
         border-bottom-right-radius: 5px;
         border-bottom-left-radius: 5px;

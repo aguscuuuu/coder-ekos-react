@@ -173,7 +173,7 @@ body ::selection {
   flex-direction: row;
   z-index: 1000;
   width: 100%;
-  border-bottom: 1px solid #d3c7cb;
+  border-bottom: 0.5px solid rgba(211, 199, 203, 0.6156862745);
   box-shadow: 0 0.3125rem 0.5rem rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
@@ -254,9 +254,9 @@ body ::selection {
   margin-top: 0.1srem;
   z-index: 100;
   min-width: 9rem;
-  border-bottom: 1px solid #d3c7cb;
-  border-left: 1px solid #d3c7cb;
-  border-right: 1px solid #d3c7cb;
+  border-bottom: 0.5px solid rgba(211, 199, 203, 0.6156862745);
+  border-left: 0.5px solid rgba(211, 199, 203, 0.6156862745);
+  border-right: 0.5px solid rgba(211, 199, 203, 0.6156862745);
   border-top: none;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -314,6 +314,7 @@ body ::selection {
   border-radius: 14px;
   background: #fff9f4;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 0.5px solid rgba(211, 199, 203, 0.6156862745);
 }
 .cartview-container .cartview-list .cart-item .cart-item-img {
   width: 4rem;
@@ -336,6 +337,9 @@ body ::selection {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 .cartview-container .cartview-actions {
   display: flex;
@@ -392,7 +396,8 @@ body ::selection {
   transition: box-shadow 0.3s ease;
   max-width: 280px;
   margin: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  border: 0.5px solid rgba(211, 199, 203, 0.6156862745);
 }
 .item .item__body a {
   text-decoration: none;
@@ -431,7 +436,7 @@ body ::selection {
   pointer-events: none;
   pointer-events: none;
   margin-bottom: 5px;
-  border-top: 1px solid #d3c7cb;
+  border-top: 0.5px solid rgba(211, 199, 203, 0.6156862745);
 }
 .item__button {
   display: inline-block;
@@ -630,7 +635,7 @@ body ::selection {
   user-select: none;
 }
 .error-container h1 {
-  font-size: 8rem;
+  font-size: 5rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -644,7 +649,7 @@ body ::selection {
   color: #5c3040;
   border-radius: 5px;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   transition: background 0.2s;
 }

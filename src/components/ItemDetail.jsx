@@ -6,19 +6,26 @@ import Swal from 'sweetalert2'
 import '../styles/_ItemDetail.scss'
 
 const ItemDetail = ({ detalle }) => {
-    const { addItem } = useContext(CartContext)
+    const { addItem, cartQuantityById } = useContext(CartContext)
     const [purchase, setPurchase] = useState(false)
+
+    // calcular stock disponible restando lo que ya está en el carrito
+    const reserved = detalle?.id ? cartQuantityById(detalle.id) : 0
+    const availableStock = Math.max((detalle?.stock || 0) - reserved, 0)
 
     const onAdd = (cantidad) => {
         setPurchase(true)
         addItem(detalle, cantidad)
         Swal.fire({
-            position: 'top-end',
+            position: 'center-center',
             icon: 'success',
-            title: `Agregaste ${detalle.name} al carrito`,
+            title: `Agregaste el producto al carrito`,
+            color: 'black',
+            background: '#ffffff',
+            fontSize: '16px',
             showCancelButton: false,
             showConfirmButton: false,
-            timer: 2000
+            timer: 1000
         })
     }
 
@@ -39,7 +46,7 @@ const ItemDetail = ({ detalle }) => {
             </p>
 
             <p className="item-detail-stock">
-                {detalle.stock} unidades disponibles.
+                {availableStock} unidades disponibles.
             </p>
 
             <p className="item-detail-description">{detalle.description}</p>
@@ -49,7 +56,7 @@ const ItemDetail = ({ detalle }) => {
                     Ir al carrito
                 </Link>
             ) : (
-                <ItemCount stock={detalle.stock} onAdd={onAdd} />
+                <ItemCount stock={availableStock} onAdd={onAdd} />
             )}
         </div>
     )

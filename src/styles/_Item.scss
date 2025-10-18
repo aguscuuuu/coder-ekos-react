@@ -8,7 +8,8 @@
     transition: box-shadow 0.3s ease;
     max-width: 280px;
     margin: 0.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid #d3c7cb9d;
     .item__body a {
         text-decoration: none;
     }
@@ -52,7 +53,7 @@
         pointer-events: none;
         pointer-events: none;
         margin-bottom: 5px;
-        border-top: 1px solid #d3c7cb;
+        border-top: 0.5px solid #d3c7cb9d;
     }
 
     &__button {
